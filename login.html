@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -15,18 +15,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script></head>
 
     <style>
-        .double {
-            zoom: 1.1;
-            transform: scale(2);
-            -ms-transform: scale(2);
-            -webkit-transform: scale(2);
-            -o-transform: scale(2);
-            -moz-transform: scale(2);
-            transform-origin: 0 0;
-            -ms-transform-origin: 0 0;
-            -webkit-transform-origin: 0 0;
-            -o-transform-origin: 0 0;
-            -moz-transform-origin: 0 0;
+        .unhighlight {
+            user-select: none;
+        }
+
+        #login_panel {
+            margin-top: 100px; padding-bottom: 100px;
+        }
+
+        .delfalt_cursor {
+            cursor: default;
+        }
+
+        .pointer {
+            cursor: pointer;
         }
     </style>
 <body>
@@ -36,14 +38,14 @@
     -->
 
     <div class="container">
-        <div class="panel panel-default" style="margin-top: 100px; padding-bottom: 100px;">
-            <div class="panel-heading">Log in</div>
+        <div class="panel panel-default" id="login_panel">
+            <div class="panel-heading unhighlight">Log in</div>
             <div class="panel-body">
                 <!-- <input type="text" value='' placeholder="Username" class="js-username"> -->
 
                 <div class="input-group">
-                    <span class="input-group-addon" style="cursor: default;">User name</span>
-                    <input type="text" class="form-control js-username" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-addon delfalt_cursor unhighlight">User name</span>
+                    <input type="text" class="form-control js-username" aria-label="Username input">
                 </div>
 
                 <p></p>
@@ -51,25 +53,26 @@
                 <!-- <input type="password" value='' placeholder="Password" class="js-password"> -->
 
                 <div class="input-group">
-                    <span class="input-group-addon" style="padding-right: 18px; cursor: default;">Password</span>
-                    <input type="password" class="form-control js-password" aria-label="Amount (to the nearest dollar)">
-                    <span class="input-group-addon js-show-password-button" style="cursor: pointer;"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></span>
+                    <span class="input-group-addon delfalt_cursor unhighlight" style="padding-right: 18px">Password</span>
+                    <input type="password" class="form-control js-password" aria-label="Password input">
+                    <span class="input-group-addon js-show-password-button pointer"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></span>
                 </div>
 
                 <p></p>
+
+                <input type="button" value="Log in!" class="btn btn-success">
                 <!-- <input type="button" value="Check password" class="js-button btn-primary" style="border-radius: 20px;"> -->
-                <div class="js-password-div"></div>
             </div>
 
         </div>
     </div>
 
     <script>
-        let defaultUsername = 'RiXe'
-        let defaultPassword = 'aVeryDumbPassword'
+        let delfaltUsername = 'RiXe'
+        let defaltPassword = 'aVeryDumbPassword'
         let showingPassword = false
-        document.querySelector('.js-username').setAttribute('value', defaultUsername)
-        document.querySelector('.js-password').setAttribute('value', defaultPassword)
+        document.querySelector('.js-username').setAttribute('value', delfaltUsername)
+        document.querySelector('.js-password').setAttribute('value', defaltPassword)
         document.querySelector('.js-show-password-button').addEventListener('click', () => {
             if (showingPassword) {
                 document.querySelector('.js-show-password-button').innerHTML = '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>' // Need to change
@@ -81,15 +84,13 @@
                 showingPassword = true
             }
         })
-        // Ignore this please, it was made during the creation of this project
-
         // document.querySelector('.js-button').addEventListener('click', () => {
         //     // console.log(document.querySelector('.js-password').value)
-        //     defaultPassword = document.querySelector('.js-password').value
+        //     defaltPassword = document.querySelector('.js-password').value
         //     document.querySelector('.js-password-div').innerHTML = `
         //     <p class="js-show-password" style="padding-top: 10px;"></p>
         //     <input type="button" class="js-hide-password btn-info" value="Hide password" style="border-radius: 20px;">`
-        //     document.querySelector('.js-show-password').innerText = defaultPassword
+        //     document.querySelector('.js-show-password').innerText = defaltPassword
         //     document.querySelector('.js-hide-password').addEventListener('click', () => {
         //         document.querySelector('.js-password-div').innerHTML = ''
         //     })
