@@ -24,7 +24,7 @@
             margin-top: 100px; padding-bottom: 100px;
         }
 
-        .delfalt_cursor {
+        .default_cursor {
             cursor: default;
         }
 
@@ -39,14 +39,14 @@
             <div class="panel-heading unhighlight">Register</div>
                 <div class="panel-body">
                     <div class="input-group">
-                        <span class="input-group-addon delfalt_cursor unhighlight">User name</span>
+                        <span class="input-group-addon default_cursor unhighlight">User name</span>
                         <input type="text" class="form-control js-username" aria-label="Username input">
                     </div>
 
                     <p></p>
 
                     <div class="input-group">
-                        <span class="input-group-addon delfalt_cursor unhighlight" style="padding-right: 18px">Password</span>
+                        <span class="input-group-addon default_cursor unhighlight" style="padding-right: 18px">Password</span>
                         <input type="password" class="form-control js-password" aria-label="Password input">
                         <span class="input-group-addon js-show-password-button pointer"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></span>
                     </div>
@@ -62,7 +62,6 @@
                 <p></p>
 
                 <input type="button" value="Register!" class="btn btn-success" style="margin-left: 20px;">
-            </div>
         </div>
     </div>
 
@@ -73,8 +72,8 @@
             checkbox.checked = !checkbox.checked
         }
 
-        let delfaltUsername = 'RiXe'
-        let defaltPassword = 'aVeryDumbPassword'
+        let defaultUsername = 'RiXe'
+        let defaultPassword = 'aVeryDumbPassword'
         let showingPassword = false
         document.querySelector('.js-show-password-button').addEventListener('click', () => {
             if (showingPassword) {
