@@ -23,7 +23,7 @@
             margin-top: 100px; padding-bottom: 100px;
         }
 
-        .delfalt_cursor {
+        .default_cursor {
             cursor: default;
         }
 
@@ -44,7 +44,7 @@
                 <!-- <input type="text" value='' placeholder="Username" class="js-username"> -->
 
                 <div class="input-group">
-                    <span class="input-group-addon delfalt_cursor unhighlight">User name</span>
+                    <span class="input-group-addon default_cursor unhighlight">User name</span>
                     <input type="text" class="form-control js-username" aria-label="Username input">
                 </div>
 
@@ -53,7 +53,7 @@
                 <!-- <input type="password" value='' placeholder="Password" class="js-password"> -->
 
                 <div class="input-group">
-                    <span class="input-group-addon delfalt_cursor unhighlight" style="padding-right: 18px">Password</span>
+                    <span class="input-group-addon default_cursor unhighlight" style="padding-right: 18px">Password</span>
                     <input type="password" class="form-control js-password" aria-label="Password input">
                     <span class="input-group-addon js-show-password-button pointer"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></span>
                 </div>
@@ -68,11 +68,11 @@
     </div>
 
     <script>
-        let delfaltUsername = 'RiXe'
-        let defaltPassword = 'aVeryDumbPassword'
+        let defaultUsername = 'RiXe'
+        let defaultPassword = 'aVeryDumbPassword'
         let showingPassword = false
-        document.querySelector('.js-username').setAttribute('value', delfaltUsername)
-        document.querySelector('.js-password').setAttribute('value', defaltPassword)
+        document.querySelector('.js-username').setAttribute('value', defaultUsername)
+        document.querySelector('.js-password').setAttribute('value', defaultPassword)
         document.querySelector('.js-show-password-button').addEventListener('click', () => {
             if (showingPassword) {
                 document.querySelector('.js-show-password-button').innerHTML = '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>' // Need to change
@@ -86,11 +86,11 @@
         })
         // document.querySelector('.js-button').addEventListener('click', () => {
         //     // console.log(document.querySelector('.js-password').value)
-        //     defaltPassword = document.querySelector('.js-password').value
+        //     defaultPassword = document.querySelector('.js-password').value
         //     document.querySelector('.js-password-div').innerHTML = `
         //     <p class="js-show-password" style="padding-top: 10px;"></p>
         //     <input type="button" class="js-hide-password btn-info" value="Hide password" style="border-radius: 20px;">`
-        //     document.querySelector('.js-show-password').innerText = defaltPassword
+        //     document.querySelector('.js-show-password').innerText = defaultPassword
         //     document.querySelector('.js-hide-password').addEventListener('click', () => {
         //         document.querySelector('.js-password-div').innerHTML = ''
         //     })
